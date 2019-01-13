@@ -1,0 +1,32 @@
+﻿<Controls:MetroWindow x:Class="FindWordInImage.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:local="clr-namespace:FindWordInImage"
+                      mc:Ignorable="d"
+                      WindowState="Maximized">
+    <ScrollViewer>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Name="MenuOpenFile" Header="_Open File" Click="MenuOpenFile_Click" />
+                    <MenuItem Name="MenuGetWindow" Header="_Get Window" Click="MenuGetWindow_Click" />
+                    <MenuItem Name="MenuGetText" Header="_Get Text" Click="MenuGetText_Click" />
+                    <MenuItem Name="MenuExit" Header="_Exit" />
+                </MenuItem>
+            </Menu>
+            <Label DockPanel.Dock="Top" Content="Enter Text" />
+            <TextBox DockPanel.Dock="Top" Name="FindWordTextBox" Width="200" HorizontalAlignment="Left" />
+            <Button DockPanel.Dock="Top" Name="FindWordButtonIron" Content="Find Words Iron" Width="200"
+                    HorizontalAlignment="Left" Click="FindWordButtonIron_Click" />
+            <Image x:Name="UploadedImage" DockPanel.Dock="Top" />
+            <Image x:Name="OutputImage" DockPanel.Dock="Top" />
+            <TextBox x:Name="TextBox" DockPanel.Dock="Bottom" TextWrapping="Wrap" Background="Black" Foreground="White"
+                     HorizontalAlignment="Center" Width="800" FontSize="30" MaxHeight="400"
+                     VerticalScrollBarVisibility="Auto" />
+        </DockPanel>
+    </ScrollViewer>
+
+</Controls:MetroWindow>
